@@ -22,7 +22,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run:
-        docker build . --file WebApp.Dockerfile --tag fruocco/oai-embeddings:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
+        docker build . --file WebApp.Dockerfile --tag davidodonnellabb/oai-embeddings:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
         docker tag davidodonnellabb/oai-embeddings:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER davidodonnellabb/oai-embeddings:latest;
         docker push davidodonnellabb/oai-embeddings:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
         docker push davidodonnellabb/oai-embeddings:latest;
